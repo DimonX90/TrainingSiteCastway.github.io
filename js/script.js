@@ -318,8 +318,10 @@ episodesContainer.addEventListener('click', function (e) {
 		</ul>
 	</div>`;
 			targetElement.insertAdjacentHTML('beforeBegin', textadd);
-			setTimeout(function () { document.querySelector('.body-episodes__textadd').classList.add('_show') }, 500)
-			setTimeout(function () { targetElement.innerHTML = "Hide Episode details"; }, 500)
+			let parentTarget = targetElement.parentNode;
+			let textremove = parentTarget.querySelector('.body-episodes__textadd');
+			setTimeout(function () { textremove.classList.add('_show'); }, 500);
+			setTimeout(function () { targetElement.innerHTML = "Hide Episode details"; }, 500);
 			targetElement.classList.add('h')
 		}
 	}
