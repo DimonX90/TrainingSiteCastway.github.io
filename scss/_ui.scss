@@ -1,0 +1,58 @@
+//Переменнные==========================================================================
+$minWidth: 320px;
+$maxWidth: 1440;
+$maxWidthContainer: 1300;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+$white: #ffffff;
+$darkgray: #363f46;
+$blue: #118da8;
+$black: #000000;
+$buttongray: #191919;
+$Staryellow: #fcff51;
+//========================================================================================================================================================
+
+._title {
+	letter-spacing: 2.88px;
+	@include adaptiv-value("font-size", 64, 32, 1);
+	@include adaptiv-value("line-height", 79, 39, 1);
+}
+
+._btn-blue {
+	border-radius: 6px;
+	background: $blue;
+	color: $white;
+	@include adaptiv-value("font-size", 18, 12, 1);
+	@include adaptiv-value("line-height", 27, 20, 1);
+	height: 51px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 20px;
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			filter: brightness(1.2);
+		}
+	}
+}
+
+._btn-gray {
+	border-radius: 6px;
+	height: 27px;
+	background: $buttongray;
+	color: $white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include adaptiv-value("font-size", 18, 12, 1);
+	@include adaptiv-value("line-height", 27, 20, 1) padding: 0 16px;
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			filter: brightness(1.5);
+		}
+	}
+}
